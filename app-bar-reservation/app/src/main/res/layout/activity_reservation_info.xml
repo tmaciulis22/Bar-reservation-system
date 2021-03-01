@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/barNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/heading_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="@string/lorem_ipsum"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barNameLabel"
+        tools:text="@string/lorem_ipsum" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        app:layout_constraintBaseline_toBaselineOf="@id/date"
+        app:layout_constraintStart_toEndOf="@id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/lorem_ipsum" />
+
+    <TextView
+        android:id="@+id/numberOfPeopleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        tools:text="@string/lorem_ipsum"/>
+
+    <TextView
+        android:id="@+id/rateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        android:text="@string/rate_it_label"
+        app:layout_constraintStart_toEndOf="@id/numberOfPeopleLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/numberOfPeopleLabel" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/peopleNumberSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_4x"
+        style="@style/Spinner"
+        app:layout_constraintStart_toEndOf="@id/rateLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/rateLabel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/spentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_yellow_22"
+        android:text="@string/spent_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberOfPeopleLabel" />
+
+    <TextView
+        android:id="@+id/totalSpentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        android:text="@string/spent_amount"
+        app:layout_constraintStart_toEndOf="@id/spentLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/spentLabel"
+        tools:text="@string/lorem_ipsum" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expensesList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/grid_unit_9x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spentLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

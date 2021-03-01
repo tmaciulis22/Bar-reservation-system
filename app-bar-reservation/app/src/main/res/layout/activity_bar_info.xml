@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/heading_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@id/averageRating"
+        tools:text="@string/lorem_ipsum" />
+
+    <TextView
+        android:id="@+id/averageRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_unit_1x"
+        android:layout_marginBottom="@dimen/grid_unit_2x"
+        android:textAppearance="@style/average_rating"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintEnd_toStartOf="@id/starImage"
+        tools:text="@string/example_rating" />
+
+    <ImageView
+        android:id="@+id/starImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/grid_unit_8x"
+        android:layout_marginBottom="@dimen/grid_unit_2x"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@+id/averageRating"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/grid_unit_3x"
+        android:layout_marginBottom="@dimen/grid_unit_3x"
+        app:layout_constraintBottom_toTopOf="@id/reserveButton"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/barImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_unit_4x"
+                android:layout_marginBottom="@dimen/grid_unit_4x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/addressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_unit_9x"
+                android:layout_marginTop="@dimen/grid_unit_4x"
+                android:layout_marginBottom="@dimen/grid_unit_4x"
+                android:text="@string/address_label"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barImage"
+                app:layout_constraintBottom_toTopOf="@id/phoneNumberLabel"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@id/addressLabel"
+                app:layout_constraintStart_toEndOf="@id/addressLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/phoneNumberLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_unit_9x"
+                android:layout_marginTop="@dimen/grid_unit_4x"
+                android:layout_marginBottom="@dimen/grid_unit_4x"
+                android:text="@string/phone_number_label"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addressLabel"
+                app:layout_constraintBottom_toTopOf="@id/workingTimesLabel"/>
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@id/phoneNumberLabel"
+                app:layout_constraintStart_toEndOf="@id/phoneNumberLabel"
+                tools:text="@string/lorem_ipsum" />
+
+
+            <TextView
+                android:id="@+id/workingTimesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grid_unit_9x"
+                android:layout_marginStart="@dimen/grid_unit_9x"
+                android:text="@string/working_times_label"
+                android:textAppearance="@style/heading_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneNumberLabel" />
+
+            <TextView
+                android:id="@+id/monLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/monday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workingTimesLabel" />
+
+            <TextView
+                android:id="@+id/monTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/monLabel"
+                app:layout_constraintStart_toEndOf="@id/monLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/tueLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/tuesday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/monLabel" />
+
+            <TextView
+                android:id="@+id/tueTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tueLabel"
+                app:layout_constraintStart_toEndOf="@id/tueLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/wedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/wednesday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tueLabel" />
+
+            <TextView
+                android:id="@+id/wedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/wedLabel"
+                app:layout_constraintStart_toEndOf="@id/wedLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/thuLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/thursday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wedLabel" />
+
+            <TextView
+                android:id="@+id/thuTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/thuLabel"
+                app:layout_constraintStart_toEndOf="@id/thuLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/friLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/friday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thuLabel" />
+
+            <TextView
+                android:id="@+id/friTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/friLabel"
+                app:layout_constraintStart_toEndOf="@id/friLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/satLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/saturday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/friLabel" />
+
+            <TextView
+                android:id="@+id/satTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/satLabel"
+                app:layout_constraintStart_toEndOf="@id/satLabel"
+                tools:text="@string/lorem_ipsum" />
+
+            <TextView
+                android:id="@+id/sunLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_9x"
+                android:text="@string/sunday"
+                android:textAppearance="@style/regular_text_white_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/satLabel" />
+
+            <TextView
+                android:id="@+id/sunTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/grid_unit_4x"
+                android:textAppearance="@style/regular_text_yellow_18"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sunLabel"
+                app:layout_constraintStart_toEndOf="@id/sunLabel"
+                tools:text="@string/lorem_ipsum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/reserveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_16x"
+        android:background="@color/vibrant_yellow"
+        android:text="@string/reserve"
+        android:textColor="@color/blue_nights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

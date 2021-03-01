@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/barHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/heading_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="@string/lorem_ipsum" />
+
+    <TextView
+        android:id="@+id/peopleQuestionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:text="@string/people_question_label"
+        android:textAppearance="@style/regular_text_white_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barHeader" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/peopleNumberSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_4x"
+        style="@style/Spinner"
+        app:layout_constraintStart_toEndOf="@id/peopleQuestionLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/peopleQuestionLabel" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:textAppearance="@style/regular_text_white_18"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@id/peopleQuestionLabel"
+        app:layout_constraintStart_toEndOf="@id/peopleNumberSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/lorem_ipsum"/>
+
+    <TextView
+        android:id="@+id/whenQuestionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:text="@string/when_question_label"
+        android:textAppearance="@style/regular_text_white_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peopleQuestionLabel" />
+
+    <EditText
+        android:id="@+id/timePicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lynx_white"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:text="@string/pick_time"
+        app:layout_constraintTop_toBottomOf="@id/whenQuestionLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/datePicker" />
+
+    <EditText
+        android:id="@+id/datePicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lynx_white"
+        android:layout_margin="@dimen/grid_unit_9x"
+        android:text="@string/pick_date"
+        app:layout_constraintTop_toBottomOf="@id/whenQuestionLabel"
+        app:layout_constraintStart_toEndOf="@id/timePicker"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_20x"
+        android:text="@string/cancel_reservation"
+        android:textColor="@color/blue_nights"
+        android:background="@color/vibrant_yellow"
+        android:paddingStart="@dimen/grid_unit_4x"
+        android:paddingEnd="@dimen/grid_unit_4x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sendButton"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_unit_20x"
+        android:text="@string/request_reservation"
+        android:textColor="@color/blue_nights"
+        android:background="@color/vibrant_yellow"
+        android:paddingStart="@dimen/grid_unit_4x"
+        android:paddingEnd="@dimen/grid_unit_4x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancelButton" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sent_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_rawRes="@raw/lottie_sent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

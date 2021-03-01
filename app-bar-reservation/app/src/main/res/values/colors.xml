@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_nights">#353B48</color>
+    <color name="vibrant_yellow">#FFD32A</color>
+    <color name="grey">#485460</color>
+    <color name="lynx_white">#F5F6FA</color>
+    <color name="transparent">#80000000</color>
+</resources>

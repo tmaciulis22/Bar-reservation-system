@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">BarReservation</string>
+
+    <string name="title_bars">Bars</string>
+    <string name="title_reservations">Reservations</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="lorem_ipsum">Lorem ipsum</string>
+
+    <string name="reviews">Reviews</string>
+    <string name="reserve">Reserve</string>
+    <string name="example_rating">4.7</string>
+    <string name="address_label">Address:</string>
+    <string name="phone_number_label">Phone number:</string>
+    <string name="working_times_label">Working times:</string>
+
+    <string name="monday">Monday:</string>
+    <string name="tuesday">Tuesday:</string>
+    <string name="wednesday">Wednesday:</string>
+    <string name="thursday">Thursday:</string>
+    <string name="friday">Friday:</string>
+    <string name="saturday">Saturday:</string>
+    <string name="sunday">Sunday:</string>
+    <string name="time">%1$s - %2$s</string>
+
+    <string name="people_question_label">How many persons?</string>
+    <string name="when_question_label">When?</string>
+    <string name="pick_time">Pick time</string>
+    <string name="pick_date">Pick date</string>
+    <string name="time_edit_text">%1$d:%2$d</string>
+    <string name="date_edit_text">%1$d/%2$d/%3$d</string>
+
+    <string name="request_reservation">Request</string>
+    <string name="edit_reservation">Edit</string>
+    <string name="cancel_reservation">Cancel</string>
+
+    <string name="accepted_status">Accepted: %1$s</string>
+    <string name="completed_status">Completed</string>
+    <string name="spent_label">Spent:</string>
+    <string name="spent_amount">%1$.2f€</string>
+    <string name="expense_amount_and_price">%1$d x %2$.2f€</string>
+    <string name="rate_it_label">Rate it:</string>
+    <string name="rating_saved_message">Rating for this bar successfully saved</string>
+    <plurals name="number_of_persons">
+        <item quantity="one">%d person</item>
+        <item quantity="other">%d persons</item>
+    </plurals>
+
+    <string-array name="people_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5+</item>
+    </string-array>
+
+    <string-array name="ratings">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
