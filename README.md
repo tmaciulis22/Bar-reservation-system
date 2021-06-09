@@ -4,7 +4,7 @@
 ➡ The system is composed of an Android app used by bar's customers and a PHP website used by bar's bartenders.
 
 ➡ Team members:  
-Tautvydas Mačiulis (responsible for app)  
-Andrius Bušma (responsible for website)  
-Tautvydas Jackevičius (responsible for documentation)  
-Laima Volungevičiūtė (responsible for documentation)
+- Tautvydas Mačiulis (responsible for app)  
+- Andrius Bušma (responsible for website)  
+- Tautvydas Jackevičius (responsible for documentation)  
+- Laima Volungevičiūtė (responsible for documentation)
